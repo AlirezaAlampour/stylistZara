@@ -45,22 +45,50 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(17, 17, 17, 0.5);
 }
-/* Instagram iframe embed styling */
-.ig-embed-wrapper {
+/* Instagram media-only cards — crops embed to show only post content */
+.ig-card {
     position: relative;
-    width: 100%;
-    background: #FFF;
-    border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.08);
+    height: 340px;
+    background: #d5d2ce;
 }
-.ig-iframe {
-    width: 100%;
-    height: 580px;
+.ig-card-iframe {
+    position: absolute;
+    top: -92px;     /* Hides profile header + reel intro watermark area */
+    left: -1px;
+    width: calc(100% + 2px);
+    height: 700px;
     border: none;
+    pointer-events: none;
+    transform: scale(1.2);
+    transform-origin: top center;
 }
-@media (min-width: 640px) {
-    .ig-iframe {
-        height: 620px;
+.ig-card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+/* Subtle play indicator for reels — visible, fades on hover */
+.ig-card-play {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 5;
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
+}
+.group:hover .ig-card-play {
+    opacity: 0.4;
+}
+/* Responsive height adjustments */
+@media (min-width: 768px) {
+    .ig-card {
+        height: 400px;
+    }
+}
+@media (min-width: 1024px) {
+    .ig-card {
+        height: 420px;
     }
 }
