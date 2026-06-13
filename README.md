@@ -1,16 +1,42 @@
-# Stylist Portfolio - Minimal Modern Design
+# Stylist Portfolio — Minimal Modern Design
 
-This project is built using a modern stack of HTML5, plain JavaScript, and Tailwind CSS (via CDN configuration). It strictly adheres to the provided screenshots and visual style guidelines.
-
-## Why this approach?
-During initialization, we detected that Node.js (`npx` and `npm`) was not available on this system. To ensure you have a working, production-ready website that is fully Vercel compatible as requested, we built it using static web technologies. Vercel perfectly supports static deployments without a build step, and this approach is extremely lightweight and performant.
-
-## How to use
-1. Just open `index.html` in your favorite browser.
-2. To deploy to Vercel, simply drag and drop this folder into your Vercel dashboard, or connect it to your GitHub repository. Vercel will auto-detect a static site.
+A clean, editorial fashion styling portfolio built as a static website. Uses HTML5, plain JavaScript, and Tailwind CSS (via CDN) — no build step required.
 
 ## Stack
+
 * Semantic HTML5
-* Tailwind CSS for styling
-* Plain JS for smooth intersection observer animations and sticky header
-* Google Fonts (Anton and Inter)
+* Tailwind CSS (CDN) for utility styling
+* Custom CSS for animations, mobile menu, and Instagram embed grid
+* Plain JavaScript for intersection observer animations, sticky header, and mobile menu
+* Google Fonts — Anton (headings) & Inter (body)
+* Real Instagram reel/post embeds via iframes
+
+## How to Use
+
+1. Open `index.html` directly in your browser, or serve locally:
+   ```bash
+   python -m http.server 8000
+   ```
+2. Visit `http://localhost:8000` to preview the site.
+
+## Deployment
+
+This is a **static site** — no build step, no Node.js, no bundler required.
+
+It is hosted with **GitHub Pages**:
+
+| Setting        | Value                                                  |
+|----------------|--------------------------------------------------------|
+| Source         | Deploy from a branch                                   |
+| Branch         | `main`                                                 |
+| Folder         | `/` (root)                                             |
+| Live URL       | https://alirezaalampour.github.io/stylistZara/         |
+
+### To enable GitHub Pages:
+
+1. Go to the GitHub repository **Settings** → **Pages**
+2. Under **Source**, select **Deploy from a branch**
+3. Set **Branch** to `main` and **Folder** to `/ (root)`
+4. Click **Save**
+5. Wait 1–2 minutes for the deployment to complete
+6. The site will be live at the URL above

@@ -6,9 +6,15 @@ html {
 body {
     background-color: #EAE7E3;
     color: #111111;
+    opacity: 0;
+    animation: bodyFadeIn 0.8s ease-out 0.1s forwards;
 }
 
-/* Animations classes for intersection observer */
+@keyframes bodyFadeIn {
+    to { opacity: 1; }
+}
+
+/* ── Animations for intersection observer ── */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -25,13 +31,13 @@ body {
 .stagger-3 { transition-delay: 450ms; }
 .stagger-4 { transition-delay: 600ms; }
 
-/* Custom selection styling */
+/* ── Custom selection styling ── */
 ::selection {
     background: #111111;
     color: #EAE7E3;
 }
 
-/* Elegant minimalist scrollbars for general page & carousels */
+/* ── Custom scrollbar ── */
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -41,12 +47,19 @@ body {
 }
 ::-webkit-scrollbar-thumb {
     background: rgba(17, 17, 17, 0.2);
+    border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(17, 17, 17, 0.5);
 }
+<<<<<<< HEAD
 /* Instagram media-only cards — crops embed to show only post content */
 .ig-card {
+=======
+
+/* ── Instagram iframe embed styling ── */
+.ig-embed-wrapper {
+>>>>>>> 319bcb752769dd96e7e7a7f450fdd4719865a6ce
     position: relative;
     overflow: hidden;
     height: 340px;
@@ -91,4 +104,99 @@ body {
     .ig-card {
         height: 420px;
     }
+}
+
+/* ── Mobile Menu Overlay ── */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu a {
+    font-family: 'Anton', Impact, sans-serif;
+    font-size: clamp(2rem, 8vw, 4rem);
+    color: #EAE7E3;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, color 0.3s ease;
+}
+
+.mobile-menu.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu.is-open a:nth-child(1) { transition-delay: 0.08s; }
+.mobile-menu.is-open a:nth-child(2) { transition-delay: 0.14s; }
+.mobile-menu.is-open a:nth-child(3) { transition-delay: 0.20s; }
+.mobile-menu.is-open a:nth-child(4) { transition-delay: 0.26s; }
+.mobile-menu.is-open a:nth-child(5) { transition-delay: 0.32s; }
+.mobile-menu.is-open a:nth-child(6) { transition-delay: 0.38s; }
+
+.mobile-menu a:hover,
+.mobile-menu a:focus {
+    color: rgba(234, 231, 227, 0.5);
+}
+
+.mobile-menu .menu-close-btn {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    font-family: 'Anton', Impact, sans-serif;
+    font-size: 1rem;
+    color: #EAE7E3;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu .menu-close-btn:hover {
+    opacity: 0.5;
+}
+
+/* ── Contact CTA button pulse ring ── */
+.cta-btn {
+    position: relative;
+    overflow: visible;
+}
+
+.cta-btn::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 1px solid currentColor;
+    opacity: 0;
+    transition: opacity 0.4s ease, inset 0.4s ease;
+}
+
+.cta-btn:hover::after {
+    inset: -8px;
+    opacity: 0.4;
+}
+
+/* ── Prevent body scroll when menu is open ── */
+body.menu-open {
+    overflow: hidden;
 }
