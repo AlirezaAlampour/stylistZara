@@ -1,0 +1,101 @@
+You are working on this repo: AlirezaAlampour/stylistZara.
+
+Goal:
+Do a serious UI/UX overhaul for a high-end fashion stylist portfolio. The current site is a static single-page HTML/CSS/JS site using Tailwind CDN, custom CSS in css/style.css, JS in js/app.js, and Tailwind config in js/tailwind.config.js. Keep it lightweight and deployable on GitHub Pages. Do not introduce a build step unless absolutely necessary.
+
+Main design direction:
+Make the site feel like a premium editorial fashion portfolio: Vogue / i-D / Saint Laurent / The Row / high-end creative agency. Minimal, cinematic, refined, sharp typography, generous spacing, strong art direction, smooth motion, mobile-first polish. Avoid generic template vibes, gradients everywhere, cheap cards, rounded SaaS UI, or overdecorated effects.
+
+Critical requirement:
+Remove the Instagram post framing completely. The current Instagram section uses Instagram iframe embeds:
+- index.html has .ig-embed-wrapper divs containing Instagram /reel/.../embed iframes.
+- css/style.css has .ig-embed-wrapper and .ig-iframe styling.
+
+Replace the Instagram iframe embed grid with a clean native video gallery using <video> elements only.
+The visible display should be only the vertical video itself, not an Instagram browser frame, not captions, not Instagram controls, not the white embed card.
+
+Important limitation:
+Do not try to hack/crop Instagram iframes. Since Instagram embeds are cross-origin, we cannot reliably remove their internal UI/chrome. Instead, create a direct-video system that expects local or CDN video files.
+
+Implementation details:
+1. Create an assets structure:
+   - assets/videos/
+   - assets/images/ or assets/posters/
+   Use placeholder paths if the files do not exist yet, for example:
+   assets/videos/reel-01.mp4
+   assets/posters/reel-01.jpg
+
+2. Replace the Instagram section with a “Selected Motion” / “Social Highlights” section:
+   - 6 vertical videos, 9:16 aspect ratio.
+   - Native <video> tags with:
+     muted
+     loop
+     playsinline
+     preload="metadata"
+     poster="..."
+   - Autoplay videos only when in viewport using IntersectionObserver in js/app.js.
+   - Pause videos when out of viewport.
+   - On hover/focus: play if paused, subtle scale, reveal tiny metadata.
+   - On mobile: tap toggles play/pause.
+   - Add accessible aria-labels.
+   - Add fallback text/link if video fails.
+
+3. Keep the Instagram link as an external CTA:
+   - “View full archive on Instagram”
+   - Link to https://www.instagram.com/stylistzaara/
+   But do not embed Instagram posts.
+
+4. Redesign the whole page:
+   - Improve hero: more editorial, less generic. Keep ZARA / stylist / Dubai positioning but make it feel premium.
+   - Add a strong above-the-fold composition: huge type, smaller refined metadata, maybe an editorial image/video panel.
+   - Replace the basic index section with a more intentional navigation/editorial contents section.
+   - Make project sections feel like a real portfolio, not placeholder cards.
+   - Use asymmetrical grids, image/video rhythm, refined captions, project metadata.
+   - Improve About section: remove the cheesy polaroid look unless it becomes truly editorial. Make it cleaner and more luxury.
+   - Improve Contact section: premium layout, clearer CTA, mail/Instagram links, less generic form if it does nothing. If keeping form, make it visually polished but do not imply backend submission works.
+
+5. Typography/style:
+   - Current fonts are Anton + Inter. You may keep them, but refine usage.
+   - Consider using very large condensed display type with restrained body copy.
+   - Use CSS variables for colors, spacing, easing.
+   - Palette should stay high-fashion: warm off-white, ink black, muted stone, maybe one subtle accent.
+   - Add better focus states and reduced-motion support.
+
+6. Motion:
+   - Keep scroll reveals but make them smoother and less gimmicky.
+   - Respect prefers-reduced-motion.
+   - Header should feel premium: minimal, sticky, readable, not jumpy.
+   - Mobile menu should feel intentional and polished.
+
+7. Code quality:
+   - Keep code simple and maintainable.
+   - Do not break GitHub Pages.
+   - Do not add dependencies.
+   - Refactor duplicated sections where useful, but static HTML is acceptable.
+   - Remove dead CSS for old Instagram iframe wrappers.
+   - Make class names clearer for custom components.
+   - Ensure responsive behavior is excellent at 375px, 768px, 1024px, and desktop.
+
+8. Performance:
+   - Use lazy loading for images.
+   - Use video preload="metadata".
+   - Do not autoplay all videos at once.
+   - Use IntersectionObserver to play/pause video gallery.
+   - Avoid huge layout shifts.
+
+9. Deliverables:
+   - Update index.html.
+   - Update css/style.css.
+   - Update js/app.js.
+   - Update js/tailwind.config.js only if needed.
+   - Add comments showing where I should place real mp4/poster assets.
+   - At the end, summarize exactly what changed and what video filenames I need to add.
+
+Acceptance criteria:
+- No Instagram iframe embeds remain visible in the page.
+- No .ig-embed-wrapper / .ig-iframe CSS remains unless fully removed.
+- Social section displays native vertical videos only.
+- Site looks like a premium fashion/editorial portfolio, not a basic Tailwind template.
+- Mobile layout is polished.
+- Header/nav/contact still work.
+- No console errors.
