@@ -93,6 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ================= 4. Native Video Gallery & Playback Management ================= */
     const videos = Array.from(document.querySelectorAll('video'));
+    const MAX_CONCURRENT = 2;
+    const playingVideos = new Set();
 
     function updatePlaybackStatus(video) {
         const card = video.closest('.motion-card') || video.closest('.card-media-wrap') || video.closest('figure');
@@ -100,25 +102,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (video.paused || video.ended) {
             card.classList.remove('is-playing');
+            playingVideos.delete(video);
         } else {
             card.classList.add('is-playing');
+            playingVideos.add(video);
+        }
+    }
+
+    function safePlay(video) {
+        // Enforce max concurrent videos
+        if (playingVideos.size >= MAX_CONCURRENT) {
+            // Pause the oldest playing video
+            const oldest = playingVideos.values().next().value;
+            if (oldest && oldest !== video) {
+                oldest.pause();
+                updatePlaybackStatus(oldest);
+            }
+        }
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.then === 'function') {
+            playPromise
+                .then(() => updatePlaybackStatus(video))
+                .catch(() => updatePlaybackStatus(video));
         }
     }
 
     function togglePlayback(video) {
         if (!video) return;
         if (video.paused) {
-            const playPromise = video.play();
-            if (playPromise && typeof playPromise.then === 'function') {
-                playPromise
-                    .then(() => updatePlaybackStatus(video))
-                    .catch(() => updatePlaybackStatus(video));
-            }
+            safePlay(video);
         } else {
             video.pause();
             updatePlaybackStatus(video);
         }
     }
+
+    // Image error handling fallback
+    document.querySelectorAll('img').forEach((img) => {
+        img.addEventListener('error', () => {
+            // Prevent broken image icon - apply a neutral background
+            img.style.display = 'none';
+            const wrap = img.closest('.feature-img-wrap') || img.closest('.card-img-wrap') || img.closest('.portrait-frame');
+            if (wrap) {
+                wrap.style.background = 'var(--color-stone)';
+            }
+        });
+    });
 
     videos.forEach((video) => {
         const card = video.closest('.motion-card') || video.closest('.card-media-wrap') || video.closest('figure');
@@ -127,6 +156,22 @@ document.addEventListener('DOMContentLoaded', () => {
         video.addEventListener('play', () => updatePlaybackStatus(video));
         video.addEventListener('pause', () => updatePlaybackStatus(video));
         video.addEventListener('ended', () => updatePlaybackStatus(video));
+
+        // Gracefully handle video load errors
+        video.addEventListener('error', () => {
+            // Show poster as static image, hide play button
+            if (controlBtn) controlBtn.style.display = 'none';
+            video.style.display = 'none';
+            const posterUrl = video.getAttribute('poster');
+            if (posterUrl && card) {
+                const posterImg = document.createElement('img');
+                posterImg.src = posterUrl;
+                posterImg.alt = video.getAttribute('aria-label') || 'Video poster';
+                posterImg.style.cssText = 'width:100%;height:100%;object-fit:cover;';
+                const mediaWrap = video.parentElement;
+                if (mediaWrap) mediaWrap.prepend(posterImg);
+            }
+        });
 
         if (controlBtn) {
             controlBtn.addEventListener('click', (event) => {
@@ -151,12 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const video = entry.target;
                 if (entry.isIntersecting) {
                     if (!reduceMotion && video.paused) {
-                        const playPromise = video.play();
-                        if (playPromise && typeof playPromise.then === 'function') {
-                            playPromise
-                                .then(() => updatePlaybackStatus(video))
-                                .catch(() => updatePlaybackStatus(video));
-                        }
+                        safePlay(video);
                     }
                 } else {
                     if (!video.paused) {
@@ -172,21 +212,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         videos.forEach((video) => playbackObserver.observe(video));
-    }
-
-    /* ================= 5. Contact Form Handling ================= */
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const name = document.getElementById('contact-name')?.value.trim() || '';
-            const email = document.getElementById('contact-email')?.value.trim() || '';
-            const message = document.getElementById('contact-message')?.value.trim() || '';
-            
-            const subject = encodeURIComponent(`Styling Inquiry — ${name || 'Portfolio Visitor'}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nProject Scope & Direction:\n${message}\n\n---\nSent via ZARA STYLIST Portfolio`);
-
-            window.location.href = `mailto:hello@zaramstylist.com?subject=${subject}&body=${body}`;
-        });
     }
 });

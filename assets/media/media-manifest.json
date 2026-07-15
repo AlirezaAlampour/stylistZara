@@ -1,5 +1,17 @@
 [
   {
+    "shortcode": "DXENu4hAQJL",
+    "original_url": "https://www.instagram.com/reel/DXENu4hAQJL/",
+    "video_path": "assets/media/videos/DXENu4hAQJL.mp4",
+    "poster_path": "assets/media/posters/DXENu4hAQJL-poster.webp",
+    "media_type": "video",
+    "width": 1280,
+    "height": 720,
+    "acquisition_status": "success",
+    "display_label": "Look 06 / Studio Motion",
+    "usage": "hero"
+  },
+  {
     "shortcode": "DRU9g_sD9kP",
     "original_url": "https://www.instagram.com/reel/DRU9g_sD9kP/",
     "video_path": "assets/media/videos/DRU9g_sD9kP.mp4",
@@ -8,29 +20,8 @@
     "width": 720,
     "height": 1280,
     "acquisition_status": "success",
-    "display_label": "Look 01 / Sculptural Silhouette"
-  },
-  {
-    "shortcode": "DQokYA4kixm",
-    "original_url": "https://www.instagram.com/reel/DQokYA4kixm/",
-    "video_path": "assets/media/videos/DQokYA4kixm.mp4",
-    "poster_path": "assets/media/posters/DQokYA4kixm-poster.webp",
-    "media_type": "video",
-    "width": 636,
-    "height": 360,
-    "acquisition_status": "success",
-    "display_label": "Styling Study / Backstage Fitting"
-  },
-  {
-    "shortcode": "DC6do0WzYL-",
-    "original_url": "https://www.instagram.com/reel/DC6do0WzYL-/",
-    "video_path": "assets/media/videos/DC6do0WzYL-.mp4",
-    "poster_path": "assets/media/posters/DC6do0WzYL--poster.webp",
-    "media_type": "video",
-    "width": 1276,
-    "height": 720,
-    "acquisition_status": "success",
-    "display_label": "Editorial Direction / Movement Study"
+    "display_label": "Look 01 / Sculptural Silhouette",
+    "usage": "motion-archive"
   },
   {
     "shortcode": "DGQxW2gzM8T",
@@ -41,18 +32,8 @@
     "width": 720,
     "height": 1280,
     "acquisition_status": "success",
-    "display_label": "Look 02 / Monochrome Proportion"
-  },
-  {
-    "shortcode": "DGlZoR5IHMv",
-    "original_url": "https://www.instagram.com/reel/DGlZoR5IHMv/",
-    "video_path": "assets/media/videos/DGlZoR5IHMv.mp4",
-    "poster_path": "assets/media/posters/DGlZoR5IHMv-poster.webp",
-    "media_type": "video",
-    "width": 360,
-    "height": 640,
-    "acquisition_status": "success",
-    "display_label": "Look 03 / Texture Study"
+    "display_label": "Look 02 / Monochrome Proportion",
+    "usage": "motion-archive"
   },
   {
     "shortcode": "DMHzfHLShmf",
@@ -63,51 +44,8 @@
     "width": 720,
     "height": 900,
     "acquisition_status": "success",
-    "display_label": "Selected Work / Wardrobe Direction"
-  },
-  {
-    "shortcode": "DJBejYgz0eH",
-    "original_url": "https://www.instagram.com/p/DJBejYgz0eH/",
-    "video_path": "assets/media/videos/DJBejYgz0eH.mp4",
-    "poster_path": "assets/media/posters/DJBejYgz0eH-poster.webp",
-    "media_type": "video",
-    "width": 1280,
-    "height": 720,
-    "acquisition_status": "success",
-    "display_label": "Styling Study / Lookbook Flow"
-  },
-  {
-    "shortcode": "DGNoDR0Jk3A",
-    "original_url": "https://www.instagram.com/reel/DGNoDR0Jk3A/",
-    "video_path": "assets/media/videos/DGNoDR0Jk3A.mp4",
-    "poster_path": "assets/media/posters/DGNoDR0Jk3A-poster.webp",
-    "media_type": "video",
-    "width": 360,
-    "height": 640,
-    "acquisition_status": "success",
-    "display_label": "Look 04 / Tailoring Focus"
-  },
-  {
-    "shortcode": "DCE3a6JoJwF",
-    "original_url": "https://www.instagram.com/reel/DCE3a6JoJwF/",
-    "video_path": "assets/media/videos/DCE3a6JoJwF.mp4",
-    "poster_path": "assets/media/posters/DCE3a6JoJwF-poster.webp",
-    "media_type": "video",
-    "width": 1278,
-    "height": 720,
-    "acquisition_status": "success",
-    "display_label": "Selected Work / Campaign Notes"
-  },
-  {
-    "shortcode": "CyBaj-ONCBz",
-    "original_url": "https://www.instagram.com/reel/CyBaj-ONCBz/",
-    "video_path": "assets/media/videos/CyBaj-ONCBz.mp4",
-    "poster_path": "assets/media/posters/CyBaj-ONCBz-poster.webp",
-    "media_type": "video",
-    "width": 1080,
-    "height": 608,
-    "acquisition_status": "success",
-    "display_label": "Styling Study / Form & Fabric"
+    "display_label": "Selected Work / Wardrobe Direction",
+    "usage": "motion-archive"
   },
   {
     "shortcode": "DU5mSqdCGov",
@@ -118,7 +56,8 @@
     "width": 720,
     "height": 1280,
     "acquisition_status": "success",
-    "display_label": "Look 05 / Editorial Fitting"
+    "display_label": "Look 05 / Editorial Fitting",
+    "usage": "motion-archive"
   },
   {
     "shortcode": "DVgC_SYDFHH",
@@ -129,17 +68,91 @@
     "width": 720,
     "height": 900,
     "acquisition_status": "success",
-    "display_label": "Selected Work / Silhouette Study"
+    "display_label": "Selected Work / Silhouette Study",
+    "usage": "motion-archive"
   },
   {
-    "shortcode": "DXENu4hAQJL",
-    "original_url": "https://www.instagram.com/reel/DXENu4hAQJL/",
-    "video_path": "assets/media/videos/DXENu4hAQJL.mp4",
-    "poster_path": "assets/media/posters/DXENu4hAQJL-poster.webp",
+    "shortcode": "DJBejYgz0eH",
+    "original_url": "https://www.instagram.com/p/DJBejYgz0eH/",
+    "video_path": "assets/media/videos/DJBejYgz0eH.mp4",
+    "poster_path": "assets/media/posters/DJBejYgz0eH-poster.webp",
     "media_type": "video",
     "width": 1280,
     "height": 720,
     "acquisition_status": "success",
-    "display_label": "Look 06 / Studio Motion"
+    "display_label": "Styling Study / Lookbook Flow",
+    "usage": "selected-work"
+  },
+  {
+    "shortcode": "DC6do0WzYL-",
+    "original_url": "https://www.instagram.com/reel/DC6do0WzYL-/",
+    "video_path": "assets/media/videos/DC6do0WzYL-.mp4",
+    "poster_path": "assets/media/posters/DC6do0WzYL--poster.webp",
+    "media_type": "video",
+    "width": 1276,
+    "height": 720,
+    "acquisition_status": "success",
+    "display_label": "Editorial Direction / Movement Study",
+    "usage": "selected-work"
+  },
+  {
+    "shortcode": "DQokYA4kixm",
+    "original_url": "https://www.instagram.com/reel/DQokYA4kixm/",
+    "video_path": "assets/media/videos/DQokYA4kixm.mp4",
+    "poster_path": "assets/media/posters/DQokYA4kixm-poster.webp",
+    "media_type": "video",
+    "width": 636,
+    "height": 360,
+    "acquisition_status": "success",
+    "display_label": "Styling Study / Backstage Fitting",
+    "usage": "reserve"
+  },
+  {
+    "shortcode": "DCE3a6JoJwF",
+    "original_url": "https://www.instagram.com/reel/DCE3a6JoJwF/",
+    "video_path": "assets/media/videos/DCE3a6JoJwF.mp4",
+    "poster_path": "assets/media/posters/DCE3a6JoJwF-poster.webp",
+    "media_type": "video",
+    "width": 1278,
+    "height": 720,
+    "acquisition_status": "success",
+    "display_label": "Selected Work / Campaign Notes",
+    "usage": "reserve"
+  },
+  {
+    "shortcode": "CyBaj-ONCBz",
+    "original_url": "https://www.instagram.com/reel/CyBaj-ONCBz/",
+    "video_path": "assets/media/videos/CyBaj-ONCBz.mp4",
+    "poster_path": "assets/media/posters/CyBaj-ONCBz-poster.webp",
+    "media_type": "video",
+    "width": 1080,
+    "height": 608,
+    "acquisition_status": "success",
+    "display_label": "Styling Study / Form & Fabric",
+    "usage": "reserve"
+  },
+  {
+    "shortcode": "DGlZoR5IHMv",
+    "original_url": "https://www.instagram.com/reel/DGlZoR5IHMv/",
+    "video_path": "assets/media/videos/DGlZoR5IHMv.mp4",
+    "poster_path": "assets/media/posters/DGlZoR5IHMv-poster.webp",
+    "media_type": "video",
+    "width": 360,
+    "height": 640,
+    "acquisition_status": "success",
+    "display_label": "Look 03 / Texture Study",
+    "usage": "reserve"
+  },
+  {
+    "shortcode": "DGNoDR0Jk3A",
+    "original_url": "https://www.instagram.com/reel/DGNoDR0Jk3A/",
+    "video_path": "assets/media/videos/DGNoDR0Jk3A.mp4",
+    "poster_path": "assets/media/posters/DGNoDR0Jk3A-poster.webp",
+    "media_type": "video",
+    "width": 360,
+    "height": 640,
+    "acquisition_status": "success",
+    "display_label": "Look 04 / Tailoring Focus",
+    "usage": "reserve"
   }
 ]
