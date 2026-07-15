@@ -43,7 +43,7 @@ All asset paths use `./` relative format (e.g. `./assets/media/videos/example.mp
 assets/media/
 ├── videos/          # MP4 video reels (H.264 + AAC, fast-start)
 ├── posters/         # WebP poster frames matching each video
-├── images/          # Local editorial images (PNG/WebP)
+├── images/          # Local editorial images (WebP)
 └── media-manifest.json
 ```
 
@@ -60,8 +60,8 @@ assets/media/
 | --- | --- | --- |
 | Videos (all tracked) | 13 | ~74.9 MB |
 | Posters | 13 | ~0.26 MB |
-| Images | 2 | ~1.2 MB |
-| **Total** | — | **~76.4 MB** |
+| Images | 2 | ~0.2 MB |
+| **Total** | — | **~75.3 MB** |
 
 > **Note**: The hero video `DXENu4hAQJL.mp4` is 16.6 MB — consider compressing or moving to Cloudinary/Cloudflare R2 for better load performance. Videos over 10 MB may be slow on GitHub Pages.
 
