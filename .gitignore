@@ -1,0 +1,6 @@
+# Temporary media acquisition files and raw dumps
+assets/videos/https*.mp4
+*.pyc
+__pycache__/
+.DS_Store
+.vscode/

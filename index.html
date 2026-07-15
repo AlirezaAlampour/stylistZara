@@ -4,33 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZARA | Fashion Stylist - Dubai</title>
+    <title>ZARA | Fashion Stylist — Dubai</title>
     <meta name="description"
-        content="Fashion styling portfolio of Zara, a Dubai-based stylist specializing in editorial, commercial, and motion-led fashion projects.">
-    <meta property="og:title" content="ZARA | Fashion Stylist - Dubai">
+        content="Premium fashion styling portfolio of Zara, a Dubai-based stylist specializing in editorial, commercial campaigns, lookbooks, and motion-led wardrobe direction.">
+    <meta property="og:title" content="ZARA | Fashion Stylist — Dubai">
     <meta property="og:description"
-        content="Premium editorial and commercial fashion styling portfolio. Based in Dubai.">
+        content="High-fashion editorial and commercial styling portfolio. Based in Dubai, UAE.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://alirezaalampour.github.io/stylistZara/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZARA | Fashion Stylist — Dubai">
+    <meta name="twitter:description" content="Editorial, campaign, and wardrobe direction portfolio based in Dubai.">
     <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Z</text></svg>">
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230c0b09'/><text x='50%' y='68%' font-family='sans-serif' font-weight='bold' font-size='68' fill='%23eeeae3' text-anchor='middle'>Z</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet">
     <script src="./js/tailwind.config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="bg-base text-primary font-body antialiased">
+<body class="bg-base text-ink font-body antialiased selection:bg-ink selection:text-base">
     <header id="main-header" class="site-header">
-        <a href="#cover" class="brand-mark" aria-label="Zara stylist home">ZARA</a>
+        <a href="#cover" class="brand-mark" aria-label="Zara Stylist Home">ZARA</a>
         <nav class="desktop-nav" aria-label="Primary navigation">
+            <a href="#work">Selected Work</a>
+            <a href="#practice">Practice</a>
             <a href="#about">About</a>
-            <a href="#editorials">Editorials</a>
-            <a href="#commercial">Commercial</a>
-            <a href="#motion">Motion</a>
+            <a href="#motion">Motion Archive</a>
             <a href="#contact">Contact</a>
         </nav>
         <a class="availability-link" href="mailto:hello@zaramstylist.com">Bookings</a>
@@ -42,10 +45,10 @@
         <button id="menu-close-btn" class="menu-close-btn" type="button" aria-label="Close navigation menu">Close</button>
         <nav aria-label="Mobile navigation">
             <a href="#cover">Home</a>
+            <a href="#work">Selected Work</a>
+            <a href="#practice">Practice</a>
             <a href="#about">About</a>
-            <a href="#editorials">Editorials</a>
-            <a href="#commercial">Commercial</a>
-            <a href="#motion">Motion</a>
+            <a href="#motion">Motion Archive</a>
             <a href="#contact">Contact</a>
         </nav>
     </div>
@@ -54,9 +57,9 @@
         <section id="cover" class="hero-section">
             <div class="hero-grid">
                 <div class="hero-kicker reveal">
-                    <span>Dubai</span>
-                    <span>Editorial styling</span>
-                    <span>Campaign direction</span>
+                    <span>Dubai, UAE</span>
+                    <span>Editorial Styling</span>
+                    <span>Campaign Direction</span>
                 </div>
 
                 <div class="hero-title-wrap reveal stagger-1">
@@ -64,319 +67,567 @@
                     <h1>ZARA<br>STYLIST</h1>
                 </div>
 
-                <figure class="hero-media reveal stagger-2">
-                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=85&w=1200"
-                        alt="Editorial fashion model in sculptural black styling" fetchpriority="high">
+                <figure class="hero-media reveal stagger-2" aria-label="Featured studio motion study">
+                    <video class="hero-video" muted loop playsinline preload="metadata"
+                        src="assets/media/videos/DXENu4hAQJL.mp4" poster="assets/media/posters/DXENu4hAQJL-poster.webp">
+                        Your browser does not support HTML5 video.
+                    </video>
                     <figcaption>
-                        <span>01</span>
-                        <span>Wardrobe as atmosphere, silhouette as language.</span>
+                        <div class="hero-caption-meta">
+                            <span class="caption-num">Look 06</span>
+                            <span class="caption-title">Studio Motion Study</span>
+                        </div>
+                        <p>Wardrobe as atmosphere, silhouette as precise language.</p>
                     </figcaption>
                 </figure>
 
                 <div class="hero-note reveal stagger-3">
-                    <p>Styling for editorials, campaigns, lookbooks, talent, and image-led fashion stories shaped with a precise Dubai point of view.</p>
-                    <a href="#motion" class="text-link">View motion highlights</a>
+                    <p class="hero-desc">Fashion stylist based in Dubai directing wardrobe, silhouette, and visual narrative for international editorials, commercial campaigns, lookbooks, and talent.</p>
+                    <div class="hero-actions">
+                        <a href="#work" class="text-link">Explore Selected Work</a>
+                        <a href="#motion" class="text-link secondary">View Motion Archive</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="index" class="contents-section section-rule">
-            <div class="section-intro reveal">
-                <p class="eyebrow">Index</p>
-                <h2>Selected services and visual direction.</h2>
+        <section id="work" class="portfolio-section section-rule">
+            <div class="section-heading reveal">
+                <p class="eyebrow">01 — Selected Work</p>
+                <h2>Editorial stories, lookbooks &amp; campaign polish.</h2>
             </div>
-            <nav class="contents-nav" aria-label="Portfolio contents">
-                <a href="#about" class="reveal">
-                    <span>01</span>
-                    <strong>Profile</strong>
-                    <em>Education, styling language, Dubai base</em>
-                </a>
-                <a href="#editorials" class="reveal stagger-1">
-                    <span>02</span>
-                    <strong>Editorials</strong>
-                    <em>Magazine stories, portraiture, fashion narratives</em>
-                </a>
-                <a href="#commercial" class="reveal stagger-2">
-                    <span>03</span>
-                    <strong>Commercial</strong>
-                    <em>Campaigns, e-commerce, lookbooks, brand shoots</em>
-                </a>
-                <a href="#motion" class="reveal stagger-3">
-                    <span>04</span>
-                    <strong>Motion</strong>
-                    <em>Native vertical reels and social highlights</em>
-                </a>
-            </nav>
+
+            <div class="portfolio-grid">
+                <!-- Feature 1: Desert Rose / Vogue Arabia -->
+                <article class="portfolio-feature reveal">
+                    <figure class="feature-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1542496658-e3267c4eeef5?auto=format&fit=crop&q=85&w=1400"
+                            alt="Sculptural tailoring and high-contrast jewelry styling for Vogue Arabia editorial" loading="lazy">
+                    </figure>
+                    <div class="portfolio-meta">
+                        <div class="meta-header">
+                            <span>Editorial Story</span>
+                            <strong>Vogue Arabia</strong>
+                        </div>
+                        <h3>Desert Rose</h3>
+                        <p>Editorial conceptualization, wardrobe direction, fitting edits, and on-set styling balancing sharp architectural tailoring against fluid desert textures.</p>
+                    </div>
+                </article>
+
+                <!-- Feature 2: Lookbook Flow Video Study -->
+                <article class="portfolio-card video-card reveal stagger-1">
+                    <div class="card-media-wrap motion-card">
+                        <video class="motion-video" muted loop playsinline preload="metadata"
+                            src="assets/media/videos/DJBejYgz0eH.mp4" poster="assets/media/posters/DJBejYgz0eH-poster.webp"
+                            aria-label="Lookbook flow styling study video">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
+                    </div>
+                    <div class="portfolio-meta">
+                        <div class="meta-header">
+                            <span>Lookbook Flow</span>
+                            <strong>Styling Study</strong>
+                        </div>
+                        <h3>Proportion &amp; Movement</h3>
+                        <p>Exploring fluid fabric movement, layering hierarchy, and silhouette transitions in natural daylight.</p>
+                        <a href="https://www.instagram.com/p/DJBejYgz0eH/" target="_blank" rel="noopener noreferrer" class="meta-link">View original post ↗</a>
+                    </div>
+                </article>
+
+                <!-- Feature 3: Harper's Bazaar Issue 12 -->
+                <article class="portfolio-card reveal stagger-2">
+                    <figure class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0c7da026dafa?auto=format&fit=crop&q=85&w=1000"
+                            alt="Monochrome high-fashion portrait with bold accessory selection" loading="lazy">
+                    </figure>
+                    <div class="portfolio-meta">
+                        <div class="meta-header">
+                            <span>Issue 12</span>
+                            <strong>Harper's Bazaar</strong>
+                        </div>
+                        <h3>Monochrome Silhouette</h3>
+                        <p>Silhouette direction and accessories story focusing on restrained black-and-white tonal depth.</p>
+                    </div>
+                </article>
+
+                <!-- Feature 4: Zara Global Campaign -->
+                <article class="portfolio-card offset-card reveal">
+                    <figure class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=85&w=1000"
+                            alt="Curated wardrobe rail showing precise commercial garment selection" loading="lazy">
+                    </figure>
+                    <div class="portfolio-meta">
+                        <div class="meta-header">
+                            <span>Brand Campaign</span>
+                            <strong>Zara Global Campaign</strong>
+                        </div>
+                        <h3>Commercial Wardrobe Direction</h3>
+                        <p>Balancing high-fashion editorial aesthetics with global retail requirements and accessible styling cues.</p>
+                    </div>
+                </article>
+
+                <!-- Feature 5: Movement Study Video -->
+                <article class="portfolio-card video-card reveal stagger-1">
+                    <div class="card-media-wrap motion-card">
+                        <video class="motion-video" muted loop playsinline preload="metadata"
+                            src="assets/media/videos/DC6do0WzYL-.mp4" poster="assets/media/posters/DC6do0WzYL--poster.webp"
+                            aria-label="Editorial movement direction study">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
+                    </div>
+                    <div class="portfolio-meta">
+                        <div class="meta-header">
+                            <span>Editorial Direction</span>
+                            <strong>Movement Study</strong>
+                        </div>
+                        <h3>Cinematic Silhouette</h3>
+                        <p>Directing garment flow and visual rhythm on set for motion-led editorial assignments.</p>
+                        <a href="https://www.instagram.com/reel/DC6do0WzYL-/" target="_blank" rel="noopener noreferrer" class="meta-link">View original post ↗</a>
+                    </div>
+                </article>
+
+                <!-- Feature 6: Resort Study Independent -->
+                <article class="portfolio-card reveal stagger-2">
+                    <figure class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=85&w=1000"
+                            alt="Outdoor resort styling with flowing silk and earth tones" loading="lazy">
+                    </figure>
+                    <div class="portfolio-meta">
+                        <div class="meta-header">
+                            <span>Resort Study</span>
+                            <strong>Independent</strong>
+                        </div>
+                        <h3>Desert Earth Palette</h3>
+                        <p>Color theory selection, fittings, and final look execution for an independent resort capsule collection.</p>
+                    </div>
+                </article>
+
+                <!-- Feature 7: Sephora Spring & H&M Studio -->
+                <article class="portfolio-card reveal">
+                    <figure class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=85&w=1000"
+                            alt="Clean beauty and fashion portrait styling" loading="lazy">
+                    </figure>
+                    <div class="portfolio-meta">
+                        <div class="meta-header">
+                            <span>Beauty Story</span>
+                            <strong>Sephora Spring Collection</strong>
+                        </div>
+                        <h3>Commercial Polish</h3>
+                        <p>Refined wardrobe pairings and subtle texture control designed to complement high-impact beauty direction.</p>
+                    </div>
+                </article>
+
+                <article class="portfolio-card reveal stagger-1">
+                    <figure class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=85&w=1000"
+                            alt="Soft daylight lookbook styling with layered cottons" loading="lazy">
+                    </figure>
+                    <div class="portfolio-meta">
+                        <div class="meta-header">
+                            <span>Lookbook</span>
+                            <strong>H&amp;M Studio SS24</strong>
+                        </div>
+                        <h3>Modern Layering</h3>
+                        <p>Structuring clean silhouettes and contemporary lookbook progression for studio photography.</p>
+                    </div>
+                </article>
+
+                <!-- Feature 8: Campaign Notes Video Study -->
+                <article class="portfolio-card video-card reveal stagger-2">
+                    <div class="card-media-wrap motion-card">
+                        <video class="motion-video" muted loop playsinline preload="metadata"
+                            src="assets/media/videos/DCE3a6JoJwF.mp4" poster="assets/media/posters/DCE3a6JoJwF-poster.webp"
+                            aria-label="Campaign wardrobe notes and backstage preparation">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
+                    </div>
+                    <div class="portfolio-meta">
+                        <div class="meta-header">
+                            <span>Selected Work</span>
+                            <strong>Campaign Notes</strong>
+                        </div>
+                        <h3>Fittings &amp; Set Direction</h3>
+                        <p>Backstage wardrobe preparation, garment steaming, and final silhouette adjustments before roll.</p>
+                        <a href="https://www.instagram.com/reel/DCE3a6JoJwF/" target="_blank" rel="noopener noreferrer" class="meta-link">View original post ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="practice" class="practice-section section-rule">
+            <div class="section-intro reveal">
+                <p class="eyebrow">02 — Practice &amp; Capabilities</p>
+                <h2>Exacting discipline across editorial, commercial &amp; private direction.</h2>
+            </div>
+
+            <div class="practice-grid">
+                <div class="practice-item reveal">
+                    <span class="practice-num">01</span>
+                    <div class="practice-content">
+                        <h3>Editorial Styling</h3>
+                        <p>Art direction, concept development, wardrobe conceptualization, moodboard curation, and on-set styling for independent and international fashion publications.</p>
+                    </div>
+                </div>
+
+                <div class="practice-item reveal stagger-1">
+                    <span class="practice-num">02</span>
+                    <div class="practice-content">
+                        <h3>Commercial Campaigns</h3>
+                        <p>High-impact campaign styling, e-commerce lookbook organization, and brand imagery execution balanced with a sharp, contemporary fashion point of view.</p>
+                    </div>
+                </div>
+
+                <div class="practice-item reveal stagger-2">
+                    <span class="practice-num">03</span>
+                    <div class="practice-content">
+                        <h3>Wardrobe Direction</h3>
+                        <p>Exacting silhouette studies, color theory selection, fitting refinement, and proportion control for talent, music videos, and image-led narratives.</p>
+                    </div>
+                </div>
+
+                <div class="practice-item reveal stagger-3">
+                    <span class="practice-num">04</span>
+                    <div class="practice-content">
+                        <h3>Personal &amp; VIP Styling</h3>
+                        <p>Bespoke wardrobe direction, private lookbook creation, event dressing, and seasonal wardrobe curation across Dubai and the UAE.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="about" class="about-section section-rule">
-            <div class="about-copy reveal">
-                <p class="eyebrow">01 - About</p>
-                <h2>Measured styling for images that need restraint, texture, and intention.</h2>
-                <p>
-                    Zara is a Dubai-based fashion stylist with a fashion design background and specialized styling training in Dubai. Her work brings editorial instinct into commercial reality, balancing silhouette, movement, color, and market context with a calm, exacting eye.
-                </p>
-            </div>
-            <figure class="about-portrait reveal stagger-1">
-                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=85&w=900"
-                    alt="Black and white editorial portrait with refined fashion styling" loading="lazy">
-                <figcaption>
-                    <span>Styling focus</span>
-                    <span>Editorial / Commercial / Talent / Wardrobe</span>
-                </figcaption>
-            </figure>
-        </section>
-
-        <section id="editorials" class="portfolio-section section-rule">
-            <div class="section-heading reveal">
-                <p class="eyebrow">02 - Editorials</p>
-                <h2>Editorial and fashion stories.</h2>
-            </div>
-
-            <div class="editorial-grid">
-                <article class="project-feature reveal">
-                    <figure>
-                        <img src="https://images.unsplash.com/photo-1542496658-e3267c4eeef5?auto=format&fit=crop&q=85&w=1100"
-                            alt="Editorial fashion styling with jewelry and sharp tailoring" loading="lazy">
-                    </figure>
-                    <div class="project-meta">
-                        <span>Desert Rose</span>
-                        <strong>Vogue Arabia</strong>
-                        <em>Editorial concept, wardrobe edit, on-set styling</em>
+            <div class="about-grid">
+                <div class="about-copy reveal">
+                    <p class="eyebrow">03 — Profile</p>
+                    <h2>Measured styling for images that need restraint, texture &amp; intention.</h2>
+                    <p class="about-lead">
+                        Zara is a Dubai-based fashion stylist with a formal fashion design background and specialized styling training in Dubai. Her work brings editorial instinct into commercial reality, balancing silhouette, movement, color, and market context with a calm, exacting eye.
+                    </p>
+                    
+                    <div class="about-credentials">
+                        <div class="credential-box">
+                            <strong>Education &amp; Training</strong>
+                            <span>Fashion Design Background &amp; Specialized Dubai Styling Certification</span>
+                        </div>
+                        <div class="credential-box">
+                            <strong>Location &amp; Reach</strong>
+                            <span>Based in Dubai, UAE — Available for regional and international commissions</span>
+                        </div>
+                        <div class="credential-box">
+                            <strong>Visual Language</strong>
+                            <span>Architectural Silhouettes, Controlled Negative Space, High-Texture Restraint</span>
+                        </div>
                     </div>
-                </article>
+                </div>
 
-                <article class="project-tile reveal stagger-1">
-                    <figure>
-                        <img src="https://images.unsplash.com/photo-1509631179647-0c7da026dafa?auto=format&fit=crop&q=85&w=900"
-                            alt="Editorial fashion model in monochrome styling" loading="lazy">
-                    </figure>
-                    <div class="project-meta">
-                        <span>Issue 12</span>
-                        <strong>Harper's Bazaar</strong>
-                        <em>Silhouette direction and accessories story</em>
+                <figure class="about-portrait reveal stagger-1">
+                    <div class="portrait-frame">
+                        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=85&w=1000"
+                            alt="Fashion stylist Zara editorial black and white portrait" loading="lazy">
                     </div>
-                </article>
-
-                <article class="project-tile project-offset reveal stagger-2">
-                    <figure>
-                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=85&w=900"
-                            alt="Editorial outdoor fashion image with flowing fabric" loading="lazy">
-                    </figure>
-                    <div class="project-meta">
-                        <span>Resort Study</span>
-                        <strong>Independent</strong>
-                        <em>Color palette, fittings, final looks</em>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="commercial" class="portfolio-section commercial-section section-rule">
-            <div class="section-heading reveal">
-                <p class="eyebrow">03 - Commercial</p>
-                <h2>Campaign polish without losing the fashion point of view.</h2>
-            </div>
-
-            <div class="commercial-grid">
-                <article class="commercial-card reveal">
-                    <figure>
-                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=85&w=900"
-                            alt="Retail fashion campaign wardrobe rail" loading="lazy">
-                    </figure>
-                    <span>Brand Campaign</span>
-                    <strong>Zara Global Campaign</strong>
-                </article>
-                <article class="commercial-card reveal stagger-1">
-                    <figure>
-                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=85&w=900"
-                            alt="Commercial fashion and beauty styling portrait" loading="lazy">
-                    </figure>
-                    <span>Beauty Story</span>
-                    <strong>Sephora Spring Collection</strong>
-                </article>
-                <article class="commercial-card reveal stagger-2">
-                    <figure>
-                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=85&w=900"
-                            alt="Fashion lookbook styling in soft daylight" loading="lazy">
-                    </figure>
-                    <span>Lookbook</span>
-                    <strong>H&amp;M Studio SS24</strong>
-                </article>
+                    <figcaption>
+                        <span>Exacting Eye</span>
+                        <span>Dubai / Editorial / Campaigns</span>
+                    </figcaption>
+                </figure>
             </div>
         </section>
 
         <section id="motion" class="motion-section section-rule" aria-labelledby="motion-title">
             <div class="motion-header reveal">
                 <div>
-                    <p class="eyebrow">04 - Selected Motion</p>
+                    <p class="eyebrow">04 — Selected Motion &amp; Archive</p>
                     <h2 id="motion-title">Social highlights, without the frame.</h2>
+                    <p class="motion-intro">Native vertical styling studies, fitting notes, and silhouette movement captured on set, presented directly without social interface borders.</p>
                 </div>
-                <a href="https://www.instagram.com/stylistzaara/" target="_blank" rel="noopener noreferrer"
-                    class="text-link">View full archive on Instagram</a>
+                <div class="motion-header-cta">
+                    <a href="https://www.instagram.com/stylistzaara/" target="_blank" rel="noopener noreferrer"
+                        class="text-link accent-link">View Full Instagram Archive ↗</a>
+                </div>
             </div>
 
-            <div id="motion-gallery" class="motion-gallery reveal stagger-1">
-                <article class="motion-card">
+            <div id="motion-gallery" class="motion-gallery">
+                <!-- Reel 1: Look 01 -->
+                <article class="motion-card reveal">
                     <div class="motion-media">
-                        <!-- Replace with a real exported vertical MP4 at assets/videos/reel-01.mp4 -->
-                        <!-- Replace poster with assets/posters/reel-01.jpg -->
                         <video class="motion-video" muted loop playsinline preload="metadata"
-                            data-src="assets/videos/reel-01.mp4" data-poster="assets/posters/reel-01.jpg"
-                            aria-label="Monochrome fitting reel">
-                            Your browser does not support HTML video.
+                            src="assets/media/videos/DRU9g_sD9kP.mp4" poster="assets/media/posters/DRU9g_sD9kP-poster.webp"
+                            aria-label="Sculptural silhouette vertical styling reel">
+                            Your browser does not support HTML5 video.
                         </video>
-                        <div class="motion-pending" aria-hidden="true">
-                            <span>Video pending</span>
-                            <p>Add assets/videos/reel-01.mp4</p>
-                        </div>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
                     </div>
                     <div class="motion-meta">
-                        <span>01</span>
-                        <h3>Monochrome Fitting</h3>
-                        <p>Editorial wardrobe study</p>
+                        <span class="reel-index">01</span>
+                        <div class="reel-info">
+                            <h3>Look 01 / Sculptural Silhouette</h3>
+                            <p>Architectural tailoring study and high-contrast fittings</p>
+                            <a href="https://www.instagram.com/reel/DRU9g_sD9kP/" target="_blank" rel="noopener noreferrer" class="reel-link">View original post ↗</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="motion-card">
+                <!-- Reel 2: Look 02 -->
+                <article class="motion-card reveal stagger-1">
                     <div class="motion-media">
-                        <!-- Replace with a real exported vertical MP4 at assets/videos/reel-02.mp4 -->
-                        <!-- Replace poster with assets/posters/reel-02.jpg -->
                         <video class="motion-video" muted loop playsinline preload="metadata"
-                            data-src="assets/videos/reel-02.mp4" data-poster="assets/posters/reel-02.jpg"
-                            aria-label="Campaign movement reel">
-                            Your browser does not support HTML video.
+                            src="assets/media/videos/DGQxW2gzM8T.mp4" poster="assets/media/posters/DGQxW2gzM8T-poster.webp"
+                            aria-label="Monochrome proportion vertical styling reel">
+                            Your browser does not support HTML5 video.
                         </video>
-                        <div class="motion-pending" aria-hidden="true">
-                            <span>Video pending</span>
-                            <p>Add assets/videos/reel-02.mp4</p>
-                        </div>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
                     </div>
                     <div class="motion-meta">
-                        <span>02</span>
-                        <h3>Campaign Movement</h3>
-                        <p>Commercial silhouettes</p>
+                        <span class="reel-index">02</span>
+                        <div class="reel-info">
+                            <h3>Look 02 / Monochrome Proportion</h3>
+                            <p>Balancing dark textures and oversized silhouette layering</p>
+                            <a href="https://www.instagram.com/reel/DGQxW2gzM8T/" target="_blank" rel="noopener noreferrer" class="reel-link">View original post ↗</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="motion-card">
+                <!-- Reel 3: Wardrobe Direction -->
+                <article class="motion-card reveal stagger-2">
                     <div class="motion-media">
-                        <!-- Replace with a real exported vertical MP4 at assets/videos/reel-03.mp4 -->
-                        <!-- Replace poster with assets/posters/reel-03.jpg -->
                         <video class="motion-video" muted loop playsinline preload="metadata"
-                            data-src="assets/videos/reel-03.mp4" data-poster="assets/posters/reel-03.jpg"
-                            aria-label="Backstage notes reel">
-                            Your browser does not support HTML video.
+                            src="assets/media/videos/DMHzfHLShmf.mp4" poster="assets/media/posters/DMHzfHLShmf-poster.webp"
+                            aria-label="Selected work wardrobe direction vertical reel">
+                            Your browser does not support HTML5 video.
                         </video>
-                        <div class="motion-pending" aria-hidden="true">
-                            <span>Video pending</span>
-                            <p>Add assets/videos/reel-03.mp4</p>
-                        </div>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
                     </div>
                     <div class="motion-meta">
-                        <span>03</span>
-                        <h3>Backstage Notes</h3>
-                        <p>Fittings and final edits</p>
+                        <span class="reel-index">03</span>
+                        <div class="reel-info">
+                            <h3>Wardrobe Direction</h3>
+                            <p>Set preparation, accessory curation, and final look checks</p>
+                            <a href="https://www.instagram.com/reel/DMHzfHLShmf/" target="_blank" rel="noopener noreferrer" class="reel-link">View original post ↗</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="motion-card">
+                <!-- Reel 4: Look 05 -->
+                <article class="motion-card reveal">
                     <div class="motion-media">
-                        <!-- Replace with a real exported vertical MP4 at assets/videos/reel-04.mp4 -->
-                        <!-- Replace poster with assets/posters/reel-04.jpg -->
                         <video class="motion-video" muted loop playsinline preload="metadata"
-                            data-src="assets/videos/reel-04.mp4" data-poster="assets/posters/reel-04.jpg"
-                            aria-label="Accessory edit reel">
-                            Your browser does not support HTML video.
+                            src="assets/media/videos/DU5mSqdCGov.mp4" poster="assets/media/posters/DU5mSqdCGov-poster.webp"
+                            aria-label="Editorial fitting vertical reel">
+                            Your browser does not support HTML5 video.
                         </video>
-                        <div class="motion-pending" aria-hidden="true">
-                            <span>Video pending</span>
-                            <p>Add assets/videos/reel-04.mp4</p>
-                        </div>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
                     </div>
                     <div class="motion-meta">
-                        <span>04</span>
-                        <h3>Accessory Edit</h3>
-                        <p>Texture and proportion</p>
+                        <span class="reel-index">04</span>
+                        <div class="reel-info">
+                            <h3>Look 05 / Editorial Fitting</h3>
+                            <p>Exploring volume, pinning, and studio light interaction</p>
+                            <a href="https://www.instagram.com/reel/DU5mSqdCGov/" target="_blank" rel="noopener noreferrer" class="reel-link">View original post ↗</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="motion-card">
+                <!-- Reel 5: Silhouette Study -->
+                <article class="motion-card reveal stagger-1">
                     <div class="motion-media">
-                        <!-- Replace with a real exported vertical MP4 at assets/videos/reel-05.mp4 -->
-                        <!-- Replace poster with assets/posters/reel-05.jpg -->
                         <video class="motion-video" muted loop playsinline preload="metadata"
-                            data-src="assets/videos/reel-05.mp4" data-poster="assets/posters/reel-05.jpg"
-                            aria-label="Studio lookbook reel">
-                            Your browser does not support HTML video.
+                            src="assets/media/videos/DVgC_SYDFHH.mp4" poster="assets/media/posters/DVgC_SYDFHH-poster.webp"
+                            aria-label="Silhouette study vertical reel">
+                            Your browser does not support HTML5 video.
                         </video>
-                        <div class="motion-pending" aria-hidden="true">
-                            <span>Video pending</span>
-                            <p>Add assets/videos/reel-05.mp4</p>
-                        </div>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
                     </div>
                     <div class="motion-meta">
-                        <span>05</span>
-                        <h3>Studio Lookbook</h3>
-                        <p>Commercial wardrobe flow</p>
+                        <span class="reel-index">05</span>
+                        <div class="reel-info">
+                            <h3>Silhouette Study</h3>
+                            <p>Controlled motion study and fabric drape testing</p>
+                            <a href="https://www.instagram.com/reel/DVgC_SYDFHH/" target="_blank" rel="noopener noreferrer" class="reel-link">View original post ↗</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="motion-card">
+                <!-- Reel 6: Look 03 -->
+                <article class="motion-card reveal stagger-2">
                     <div class="motion-media">
-                        <!-- Replace with a real exported vertical MP4 at assets/videos/reel-06.mp4 -->
-                        <!-- Replace poster with assets/posters/reel-06.jpg -->
                         <video class="motion-video" muted loop playsinline preload="metadata"
-                            data-src="assets/videos/reel-06.mp4" data-poster="assets/posters/reel-06.jpg"
-                            aria-label="Archive cut reel">
-                            Your browser does not support HTML video.
+                            src="assets/media/videos/DGlZoR5IHMv.mp4" poster="assets/media/posters/DGlZoR5IHMv-poster.webp"
+                            aria-label="Texture study vertical reel">
+                            Your browser does not support HTML5 video.
                         </video>
-                        <div class="motion-pending" aria-hidden="true">
-                            <span>Video pending</span>
-                            <p>Add assets/videos/reel-06.mp4</p>
-                        </div>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
                     </div>
                     <div class="motion-meta">
-                        <span>06</span>
-                        <h3>Archive Cut</h3>
-                        <p>Selected styling moments</p>
+                        <span class="reel-index">06</span>
+                        <div class="reel-info">
+                            <h3>Look 03 / Texture Study</h3>
+                            <p>Surface detail, raw hems, and tactile material contrast</p>
+                            <a href="https://www.instagram.com/reel/DGlZoR5IHMv/" target="_blank" rel="noopener noreferrer" class="reel-link">View original post ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Reel 7: Look 04 -->
+                <article class="motion-card reveal">
+                    <div class="motion-media">
+                        <video class="motion-video" muted loop playsinline preload="metadata"
+                            src="assets/media/videos/DGNoDR0Jk3A.mp4" poster="assets/media/posters/DGNoDR0Jk3A-poster.webp"
+                            aria-label="Tailoring focus vertical reel">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
+                    </div>
+                    <div class="motion-meta">
+                        <span class="reel-index">07</span>
+                        <div class="reel-info">
+                            <h3>Look 04 / Tailoring Focus</h3>
+                            <p>Sharp shoulders, waist precision, and structured outerwear</p>
+                            <a href="https://www.instagram.com/reel/DGNoDR0Jk3A/" target="_blank" rel="noopener noreferrer" class="reel-link">View original post ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Reel 8: Form & Fabric -->
+                <article class="motion-card reveal stagger-1">
+                    <div class="motion-media">
+                        <video class="motion-video" muted loop playsinline preload="metadata"
+                            src="assets/media/videos/CyBaj-ONCBz.mp4" poster="assets/media/posters/CyBaj-ONCBz-poster.webp"
+                            aria-label="Form and fabric study reel">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
+                    </div>
+                    <div class="motion-meta">
+                        <span class="reel-index">08</span>
+                        <div class="reel-info">
+                            <h3>Form &amp; Fabric</h3>
+                            <p>Soft draping against structured minimal backgrounds</p>
+                            <a href="https://www.instagram.com/reel/CyBaj-ONCBz/" target="_blank" rel="noopener noreferrer" class="reel-link">View original post ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Reel 9: Backstage Fitting -->
+                <article class="motion-card reveal stagger-2">
+                    <div class="motion-media">
+                        <video class="motion-video" muted loop playsinline preload="metadata"
+                            src="assets/media/videos/DQokYA4kixm.mp4" poster="assets/media/posters/DQokYA4kixm-poster.webp"
+                            aria-label="Backstage fitting notes reel">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <button class="video-control-btn" type="button" aria-label="Toggle video playback">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">Click to Play</span>
+                        </button>
+                    </div>
+                    <div class="motion-meta">
+                        <span class="reel-index">09</span>
+                        <div class="reel-info">
+                            <h3>Backstage Fitting Notes</h3>
+                            <p>Pre-shoot garment curation and lookbook sequencing</p>
+                            <a href="https://www.instagram.com/reel/DQokYA4kixm/" target="_blank" rel="noopener noreferrer" class="reel-link">View original post ↗</a>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
 
         <section id="contact" class="contact-section section-rule">
-            <div class="contact-copy reveal">
-                <p class="eyebrow">05 - Contact</p>
-                <h2>Available for editorials, campaigns, lookbooks, and private styling direction.</h2>
-                <p>
-                    Share the project date, location, visual references, and scope. The form opens your email app so the message stays direct.
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:hello@zaramstylist.com">hello@zaramstylist.com</a>
-                    <a href="https://www.instagram.com/stylistzaara/" target="_blank" rel="noopener noreferrer">@stylistzaara</a>
+            <div class="contact-grid">
+                <div class="contact-copy reveal">
+                    <p class="eyebrow">05 — Contact &amp; Bookings</p>
+                    <h2>Direct commissions for editorials, campaigns &amp; lookbook styling.</h2>
+                    <p class="contact-lead">
+                        Available for editorial direction, commercial campaigns, lookbooks, talent styling, and private consultations across Dubai and internationally.
+                    </p>
+                    <div class="contact-direct">
+                        <div class="direct-item">
+                            <span>Direct Email Inquiry</span>
+                            <a href="mailto:hello@zaramstylist.com" class="direct-link">hello@zaramstylist.com</a>
+                        </div>
+                        <div class="direct-item">
+                            <span>Instagram Archive &amp; DM</span>
+                            <a href="https://www.instagram.com/stylistzaara/" target="_blank" rel="noopener noreferrer" class="direct-link">@stylistzaara ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap reveal stagger-1">
+                    <div class="form-header">
+                        <h3>Draft Inquiry in Email Client</h3>
+                        <p>Share your project scope, timeline, and visual direction. Submitting launches your native email client with your formatted message ready to send.</p>
+                    </div>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <label>
+                                <span>Your Name</span>
+                                <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Name or Studio" required>
+                            </label>
+                            <label>
+                                <span>Your Email</span>
+                                <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="name@domain.com" required>
+                            </label>
+                        </div>
+                        <label>
+                            <span>Project Scope &amp; Notes</span>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="Please include project dates, location, deliverables, and any relevant visual references..." required></textarea>
+                        </label>
+                        <div class="form-actions">
+                            <button class="cta-btn" type="submit">
+                                <span>Draft Email Inquiry</span>
+                                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </button>
+                            <span class="form-note">Opens default mail client</span>
+                        </div>
+                    </form>
                 </div>
             </div>
 
-            <form id="contact-form" class="contact-form reveal stagger-1">
-                <label>
-                    <span>Name</span>
-                    <input id="contact-name" name="name" type="text" autocomplete="name" required>
-                </label>
-                <label>
-                    <span>Email</span>
-                    <input id="contact-email" name="email" type="email" autocomplete="email" required>
-                </label>
-                <label>
-                    <span>Project notes</span>
-                    <textarea id="contact-message" name="message" rows="5" required></textarea>
-                </label>
-                <button class="cta-btn" type="submit">Draft inquiry</button>
-            </form>
-
             <footer class="site-footer">
-                <span>2026 Zara Stylist</span>
-                <span>Dubai</span>
+                <div class="footer-left">
+                    <span class="footer-brand">ZARA STYLIST</span>
+                    <span>© 2026 — Dubai, UAE</span>
+                </div>
+                <div class="footer-right">
+                    <a href="#cover" class="back-to-top">Back to Top ↑</a>
+                </div>
             </footer>
         </section>
     </main>
